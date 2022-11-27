@@ -17,7 +17,7 @@ Loader.Loaded = {}
 ]=]
 function Loader.Load(modules: { ModuleScript })
 	assert(
-		type(modules) == "table" and modules[1].ClassName == "ModuleScript",
+		type(modules) == "table" and #modules > 0 and modules[1].ClassName == "ModuleScript",
 		"Loader.Load must be provided an array of ModuleScripts to load"
 	)
 
